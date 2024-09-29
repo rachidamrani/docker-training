@@ -68,7 +68,7 @@ app.get('/people', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://mongodb/swfavorites',
+  'mongodb://mongodb/swfavorites', // mongodb here is the name of the running mongodb container, docker uses that name to resolve the ip address of the container 
   { useNewUrlParser: true },
   (err) => {
     if (err) {
