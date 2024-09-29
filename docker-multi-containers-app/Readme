@@ -1,0 +1,7 @@
+How to dockerize an app using multiple containers:
+
+1. Create Dockerfiles for the frontend and backend apps.
+2. Create a network to run all three containers: frontend, backend, and MongoDB onto it.
+3. Update the source code in the backend app to use the MongoDB container's name instead of 'localhost:27017'.
+4. Update the source code in the frontend app to fetch data from the exposed port in the backend running container; I used '-p 5001:80'."
+5. Build images.
