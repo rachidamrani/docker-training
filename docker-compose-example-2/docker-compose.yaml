@@ -1,6 +1,7 @@
 services:
   # MongoDB Service (Container) :
   mongodb:
+    container_name: mongodbdoub
     image: 'mongo'
     volumes: 
       - data:/data/db
@@ -12,6 +13,7 @@ services:
       - ./env/mongo.env
   # Backend Service (Container) :
   backend:
+    container_name: backend
     build: ./backend
     # build:
     #   context: ./backend
@@ -30,6 +32,7 @@ services:
       - mongodb
   # Frontend Service (Container) :
   frontend:
+    container_name: frontend
     build: ./frontend
     ports:
       - '3000:3000'
